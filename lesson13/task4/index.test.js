@@ -1,4 +1,4 @@
-import {calc} from './index';
+import {calc} from './calculator';
 
 it('plus',()=>{
     const result = calc('1 + 2');
