@@ -1,4 +1,4 @@
-const finishList = ()=>{
+export const finishList = ()=>{
     const listItemOne = document.createElement('li');
     listItemOne.textContent = '1'
     const special = document.querySelector('.special');
