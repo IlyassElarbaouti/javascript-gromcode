@@ -8,10 +8,10 @@ export const getDescription = ()=>{
    return about.innerText
 }
 export const getPlans= ()=>{
-   const about = document.querySelector('.plans');
-   return about.innerHTML
+   const plans = document.querySelector('.plans');
+   return plans.innerHTML
 }
-export const getGoals= ()=>{
-   const about = document.querySelector('.goal');
-   return about.outerHTML
+export const getGoal= ()=>{
+   const goal = document.querySelector('.goal');
+   return goal.outerHTML
 }
