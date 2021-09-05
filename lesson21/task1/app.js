@@ -21,6 +21,8 @@ export const tasks = [
 // append li to ul
 
 const renderTasks = (tasksList) => {
+  console.log(`renderTasks is running`);
+
   const listElem = document.querySelector(".list");
 
   const listItemsElements = tasksList.map((item) => {
@@ -45,15 +47,8 @@ const renderTasks = (tasksList) => {
   listElem.append(...listItemsElements);
 };
 renderTasks(tasks);
-// add functionality
+
 document.querySelector(".create-task-btn").onclick = () => {
   const newValueText = document.querySelector(".task-input").value;
-  const newObj = { text: newValueText, done: false };
-  tasks.push(newObj);
-  const newArr = tasks.filter(obj=>obj.text===newValueText);
-  console.log(newArr)
-  renderTasks(newArr);
+  tasks.push({ text: newValueText, done: false });
 };
-
-
-
