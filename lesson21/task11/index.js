@@ -6,7 +6,7 @@ export function manageClasses(){
   one.classList.add("selected")
   two.classList.remove("selected")
   three.classList.toggle("three_done")
-  if(four.classList.value.includes("some-class")){
+  if(four.outerHTML.includes("some-class")){
     four.classList.add("another-class")
   }
 }
