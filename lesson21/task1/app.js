@@ -20,28 +20,30 @@ export const tasks = [
 // append text to li
 // append li to ul
 
-const renderTasks = tasksList => {
-  // put your code here
-  const list = document.querySelector('.list');
-  tasksList.map(el=>{
-  const listItem = document.createElement('li');
-  listItem.classList.add('list__item');
-  const checkbox = document.createElement('input');
-  // checkbox
-  checkbox.setAttribute('type','checkbox')
-  listItem.append(checkbox);
-  if(el.done){
-      checkbox.checked=true;
-  }
-  // 
-  listItem.append(el.text);
-  list.append(listItem)
-  return listItem
-  })
+const renderTasks = (tasksList) => {
+  const listElem = document.querySelector(".list");
 
-  
+  const listItemsElements = tasksList.map((item) => {
+    const listItemElement = document.createElement("li");
+    listItemElement.classList.add("list__item");
+
+    const checkbox = document.createElement("INPUT");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.classList.add("list__item-checkbox");
+
+    if (item.done) {
+      checkbox.checked = "true";
+      listItemElement.classList.toggle("list__item_done");
+    }
+
+    listItemElement.append(checkbox);
+    listItemElement.append(`${item.text}`);
+
+    return listItemElement;
+  });
+
+  listElem.append(...listItemsElements);
 };
-
 renderTasks(tasks);
 // add functionality
 document.querySelector(".create-task-btn").onclick = () => {
