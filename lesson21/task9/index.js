@@ -1,4 +1,4 @@
-export const finishList = ()=>{
+export function finishList(){
     const special = document.querySelector('.special');
     const list = document.querySelector('.list');
 
