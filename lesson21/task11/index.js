@@ -1,13 +1,14 @@
 export const manageClasses = ()=>{
   const one= document.querySelector(".one");
-  one.classList.add("selected")
   const two = document.querySelector(".two");
-  two.classList.remove("selected")
   const three = document.querySelector(".three");
-  three.classList.toggle("three_done")
   const four = document.querySelector(".four");
+  one.classList.add("selected")
+  two.classList.remove("selected")
+  three.classList.toggle("three_done")
   if(four.classList.value.includes("some-class")){
     four.classList.add("another-class")
   }
 }
 manageClasses()
+
