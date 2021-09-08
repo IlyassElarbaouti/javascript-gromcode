@@ -1,5 +1,5 @@
 const listElem = document.querySelector('.list');
-
+const generateId = () => Math.random().toFixed(3)*1000;
 const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
@@ -7,15 +7,20 @@ const tasks = [
   { text: 'Visit doctor', done: true },
   { text: 'Buy meat', done: true },
 ];
+// eslint-disable-next-line no-param-reassign
+tasks.forEach(task=>{task.id=generateId()})
+console.log(tasks)
 
 const renderTasks = tasksList => {
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
-    .map(({ text, done }) => {
+    .map(({ text, done,id }) => {
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
+      listItemElem.dataset.id = id;
       const checkbox = document.createElement('input');
       checkbox.setAttribute('type', 'checkbox');
+       checkbox.dataset.id = id;
       checkbox.checked = done;
       checkbox.classList.add('list__item-checkbox');
       if (done) {
@@ -31,7 +36,6 @@ const renderTasks = tasksList => {
 
 renderTasks(tasks);
 
-const generateId = () => Math.random().toFixed(3)*1000;
 const createBtn = document.querySelector(".create-task-btn");
 const input = document.querySelector(".task-input");
 
