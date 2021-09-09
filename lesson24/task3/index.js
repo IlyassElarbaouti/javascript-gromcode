@@ -1,5 +1,5 @@
 
-const getDiff =(startDate,endDate)=>{
+export const getDiff =(startDate,endDate)=>{
     const datesArr = [startDate.getTime(),endDate.getTime()].sort((a,b)=>b-a);
     const timeDiff =datesArr[0]-datesArr[1] ;// in millisecondes
 
