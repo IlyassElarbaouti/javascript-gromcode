@@ -18,6 +18,7 @@ const onCounterChange = (e) => {
   localStorage.setItem("counterValue", newValue);
 
   counterValueElem.textContent = newValue;
+  return newValue
 };
 
 counterElem.addEventListener("click", onCounterChange);
