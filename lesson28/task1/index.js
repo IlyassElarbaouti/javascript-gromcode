@@ -3,25 +3,24 @@
    const calculator={
         add(number){
            result+= number;
-           return calculator
+           return calculator;
        },
        subtract(number){
            result-= number;
-           return calculator
+           return calculator;
        },
        div(number){
            result/= number;
-           return calculator
+           return calculator;
        },
        mutl(number){
            result*= number;
-           return calculator
+           return calculator;
        },
        result(){
-           
-           return result
-       }
+           return result;
+       },
    }
-   return calculator
+   return calculator;
 
-}
+};
