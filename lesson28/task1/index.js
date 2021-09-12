@@ -1,20 +1,20 @@
 export const calc = initialvalue =>{
     let result = initialvalue;
    const calculator={
-       add(value){
-           result+= value;
+       add(number){
+           result+= number;
            return this
        },
-       substract(value){
-           result-= value;
+       substract(number){
+           result-= number;
            return this
        },
-       div(value){
-           result/= value;
+       div(number){
+           result/= number;
            return this
        },
-       mutl(value){
-           result*= value;
+       mutl(number){
+           result*= number;
            return this
        },
        result(){
@@ -25,4 +25,3 @@ export const calc = initialvalue =>{
    return calculator
 
 }
-console.log(calc(3).add(5).result());
