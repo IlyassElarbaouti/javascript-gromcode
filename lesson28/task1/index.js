@@ -3,19 +3,19 @@ export const calc = initialvalue =>{
    const calculator={
        add(number){
            result+= number;
-           return this
+           return calculator
        },
        substract(number){
            result-= number;
-           return this
+           return calculator
        },
        div(number){
            result/= number;
-           return this
+           return calculator
        },
        mutl(number){
            result*= number;
-           return this
+           return calculator
        },
        result(){
            
