@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-unresolved
-import { renderTasks } from "./renderer.js";
+import { renderTasks } from "./render.js";
 import { getItem, setItem } from "./storage.js";
 
 // eslint-disable-next-line consistent-return
