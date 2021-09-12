@@ -5,7 +5,7 @@
            result+= number;
            return calculator
        },
-       substract(number){
+       subtract(number){
            result-= number;
            return calculator
        },
