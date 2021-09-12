@@ -1,4 +1,4 @@
-import { renderTasks } from "./renderer.js.js";
+import { renderTasks } from "./render.js";
 import { getItem, setItem } from "./storage.js";
 
 // eslint-disable-next-line consistent-return
