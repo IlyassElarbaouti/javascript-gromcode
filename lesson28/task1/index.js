@@ -13,7 +13,7 @@
            result/= number;
            return calculator;
        },
-       mutl(number){
+       mult(number){
            result*= number;
            return calculator;
        },
@@ -24,3 +24,4 @@
    return calculator;
 
 };
+
