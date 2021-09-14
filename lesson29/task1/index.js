@@ -1,11 +1,11 @@
 export const addImage = (imgSrc, callback) => {
   // put your code here
   const container = document.querySelector('.page');
-  const img = document.createElement('img');
-  img.setAttribute('src',`${imgSrc}`);
-  img.addEventListener('load',()=>{
-  container.appendChild(img);
-  callback(null,img);
+  const imgElem = document.createElement('img');
+  imgElem.setAttribute('src',`${imgSrc}`);
+  imgElem.addEventListener('load',()=>{
+  container.appendChild(imgElem);
+  callback(null,imgElem);
 
   })
 
