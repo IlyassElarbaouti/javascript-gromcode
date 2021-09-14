@@ -12,5 +12,5 @@ export const pinger = (num,period)=>{
     },period)
 
 }
-pinger(5,1000)
+
 
