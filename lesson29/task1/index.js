@@ -3,8 +3,7 @@ export const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
   imgElem.src =imgSrc;
   imgElem.setAttribute('alt',`my photo`);
-  const containerElem = document.querySelector('.page');
-  containerElem.appendChild(imgElem);
+  document.querySelector('.page').appendChild(imgElem);
   imgElem.addEventListener('load',()=>callback(null,imgElem));
   imgElem.addEventListener('error',()=>callback('Image load is failed'))
   
