@@ -1,4 +1,4 @@
-const pinger = (num,period)=>{
+export const pinger = (num,period)=>{
     let i = num;
  const interval =setInterval(()=>{
      // eslint-disable-next-line no-plusplus
