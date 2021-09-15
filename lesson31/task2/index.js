@@ -7,11 +7,14 @@ export const asyncCalculator =(number)=> new Promise((resolve,reject)=>{
   console.log(`Initial value: ${value}`)
   return value
 })
-.then(value=>{
-  const result = value**2;
-  console.log(`Squared value: ${result}`);
-  return result;
-})
+.then(value=>new Promise((resolve)=>{
+    setTimeout(()=>{
+    const result = value**2;
+    console.log(`Squared value: ${result}`);
+    resolve(result)
+    },500)
+    
+  }))
 .then(value=>{
   const result = value*2;
   console.log(`Doubled value: ${result}`);
