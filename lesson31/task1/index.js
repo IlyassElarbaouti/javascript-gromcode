@@ -25,6 +25,3 @@ export const requestUserData = userId => {
   })
   return promise;
 };
-requestUserData('broken').then(data=>
-  console.log(data)
-).catch()
