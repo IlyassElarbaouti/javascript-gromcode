@@ -7,8 +7,11 @@ export const requestUserData = userId => {
   
   const promise = new Promise((resolve,reject)=>{
     if(userId==='broken'){
+      setTimeout(()=>{
       reject(new Error('User not Found'))
-    }
+    },500)}
+      
+    
     else{
     setTimeout(()=>{
       resolve({
