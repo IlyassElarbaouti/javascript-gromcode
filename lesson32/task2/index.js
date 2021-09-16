@@ -18,9 +18,9 @@ const request = url => new Promise(resolve=>{
     })
   },randomDelay)
 });
-export const getUserAsap = (userID)=>{
+export const getUserASAP = (userID)=>{
   const userUrls = servers.map(serverUrl=>`${serverUrl}/${userID}`)
   const requests = userUrls.map(userUrl=>request(userUrl));
   return Promise.race(requests)
 }
-getUserAsap('user1').then(value=>console.log(value));
+getUserASAP('user1').then(value=>console.log(value));
