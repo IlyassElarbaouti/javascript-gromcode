@@ -16,7 +16,7 @@ const getSum = (arr)=>
 
 
 export const asyncSum = (...asyncFuncs)=>
-  Promise.all(asyncFuncs).then(numbers=>getSum(numbers));
+  Promise.all(asyncFuncs).then(numbers=>getSum(numbers)).catch(Promise.reject(new Error('can\'t calculate' )));
 
   // testing
 asyncSum(asyncFunc1,asyncFunc2,asyncFunc3,asyncFunc4,asyncFunc5).then(result=>console.log(result));
