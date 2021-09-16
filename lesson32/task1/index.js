@@ -15,7 +15,7 @@ const getSum = (arr)=>
    arr.filter(number=>!isNaN(number)).reduce((acc,num)=>acc+Number(num),0);
 
 
-const asyncSum = (...asyncFuncs)=>
+export const asyncSum = (...asyncFuncs)=>
   Promise.all(asyncFuncs).then(numbers=>getSum(numbers));
 
   // testing
