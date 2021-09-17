@@ -13,6 +13,7 @@ const fetchData=()=>{
 const renderData=()=>{
     fetchData()
     .then(userData=>{
+        console.log(userData);
         img.src=userData.avatar_url;
         userName.textContent=userData.name;
         location.textContent=userData.location?`from ${userData.location}`:'';
