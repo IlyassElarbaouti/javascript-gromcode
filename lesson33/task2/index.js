@@ -8,8 +8,7 @@ export function getTasksList() {
 
 export function getTaskById(taskId) {
   //  getTaskById logic
-   return fetch(baseUrl)
-  .then(data=>data.json())
+  return getTasksList()
   .then(usersArr=>usersArr.find(user=>user.id===taskId))
   
 }
