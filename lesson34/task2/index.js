@@ -9,35 +9,30 @@ const baseUrl = 'https://6145d36c38339400175fc71d.mockapi.io/api/v1/users/';
 
 export function getUsersList() {
   // put your code here
-  fetch(baseUrl)
+  return fetch(baseUrl)
   .then(data=>data.json())
-  .then(data=>console.log(data))
 }
 
 export function getUserById(userId) {
   // put your code here
-  fetch(baseUrl+userId)
+  return fetch(baseUrl+userId)
   .then(data=>data.json())
-  .then(user=>console.log(user))
 }
 
 export function createUser(userData) {
   // put your code here
-  fetch(baseUrl,{
+  return fetch(baseUrl,{
       method:'POST',
       headers:{"Content-type": "application/json; charset=UTF-8"},
       body:JSON.stringify(userData)
-  })
-  .then(response => response.json())
+  });
 }
-createUser(user1);
 
 
  export function deleteUser(userId) {
   fetch(baseUrl+userId,{
   method:'DELETE',
   })
-  .then(response => response.json())
 }
 
 
@@ -47,7 +42,6 @@ export function updateUser(userId, userData) {
       method: 'PUT',
       body:JSON.stringify(userData)
   })
-  .then(response => response.json())
 }
 
 // examples
