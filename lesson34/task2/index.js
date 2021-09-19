@@ -20,11 +20,12 @@ export function getUserById(userId) {
 }
 
 export function createUser(userData) {
-  // put your code here
-  return fetch(baseUrl,{
-      method:"POST",
-      headers:{"Content-type": "application/json; charset=UTF-8"},
-      body:JSON.stringify(userData)
+  return fetch(baseUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(userData),
   });
 }
 
