@@ -30,7 +30,7 @@ export function createUser(userData) {
 
 
  export function deleteUser(userId) {
-  fetch(baseUrl+userId,{
+  return fetch(baseUrl+userId,{
   method:"DELETE",
   })
 }
@@ -38,7 +38,7 @@ export function createUser(userData) {
 
 export function updateUser(userId, userData) {
   // put your code here
-  fetch(baseUrl+userId,{
+  return fetch(baseUrl+userId,{
       method: "PUT",
       body:JSON.stringify(userData)
   })
