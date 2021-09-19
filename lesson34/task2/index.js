@@ -40,6 +40,9 @@ export function updateUser(userId, userData) {
   // put your code here
   return fetch(baseUrl+userId,{
       method: "PUT",
+       headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
       body:JSON.stringify(userData)
   })
 }
