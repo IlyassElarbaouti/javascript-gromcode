@@ -22,7 +22,7 @@ export function getUserById(userId) {
 export function createUser(userData) {
   // put your code here
   return fetch(baseUrl,{
-      method:'POST',
+      method:"POST",
       headers:{"Content-type": "application/json; charset=UTF-8"},
       body:JSON.stringify(userData)
   });
@@ -31,7 +31,7 @@ export function createUser(userData) {
 
  export function deleteUser(userId) {
   fetch(baseUrl+userId,{
-  method:'DELETE',
+  method:"DELETE",
   })
 }
 
@@ -39,7 +39,7 @@ export function createUser(userData) {
 export function updateUser(userId, userData) {
   // put your code here
   fetch(baseUrl+userId,{
-      method: 'PUT',
+      method: "PUT",
       body:JSON.stringify(userData)
   })
 }
