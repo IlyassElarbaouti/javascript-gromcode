@@ -20,6 +20,5 @@ else{
     locationElem.textContent ='';
 }
 
-locationElem.textContent =location;
 
 }
