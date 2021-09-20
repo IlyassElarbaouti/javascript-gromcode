@@ -18,7 +18,10 @@ export const onSearch = ()=>{
     const userName = inputElem.value;
     inputElem.value = ''
     fetch(baseUrl+userName)
-    .then(response=>response.json())
+    .then(response=>{
+        if(response.status===200){return response.json()};
+        throw new Error('Failed to load data')
+    })
     .then(data=>{renderer(data)
         return data.repos_url
     })
