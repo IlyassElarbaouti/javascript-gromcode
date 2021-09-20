@@ -5,12 +5,14 @@ import {showSpinner , hideSpinner} from './spinner.js'
 
 const inputElem = document.querySelector('.name-form__input');
 const baseUrl = 'https://api.github.com/users/';
-const list = document.querySelector('.repo-list')
 
 
 export const fetchRepos = url=>
     fetch(url)
-    .then(data=>data.json());
+    .then(response=>{
+        if(response.status===200){return response.json()};
+        throw new Error('Failed to load data')
+    });
 
 export const onSearch = ()=>{
     cleanReposList();
