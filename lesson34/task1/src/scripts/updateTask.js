@@ -1,5 +1,4 @@
 import { renderTasks } from './renderer.js';
-import { listElem } from './createTask.js';
 import { setItem, getItem } from './storage.js';
 import { updateTask, getTasksList } from './taskGateway.js';
 

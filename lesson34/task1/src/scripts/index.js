@@ -1,7 +1,7 @@
 import { renderTasks } from './renderer.js';
 import { onCreateTask, listElem } from './createTask.js';
 import { updatedTasks } from './updateTask.js';
-import { getItem, setItem , tasks } from './storage.js';
+import { getItem, setItem } from './storage.js';
 import { getTasksList } from './taskGateway.js';
 import { onDeleteTask } from './deleteTask.js';
 
@@ -18,8 +18,8 @@ crtBtnElem.addEventListener('click', onCreateTask);
 listElem.addEventListener('click', updatedTasks);
 listElem.addEventListener('click', onDeleteTask);
 
-const onStorageChange = e => {
-  if (e.key === 'tasksList') {
+const onStorageChange = event => {
+  if (event.key === 'tasksList') {
     renderTasks();
   }
   setItem('tasksList', getItem('tasksList'));
