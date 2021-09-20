@@ -7,7 +7,19 @@ const imgElem = document.querySelector('.user__avatar')
 export const renderer = (userData)=>{
     const {avatar_url,name,location} = userData;
 imgElem.src = avatar_url;
-nameElem.textContent =name;
+if(name){
+    nameElem.textContent =name;
+}
+else{
+    nameElem.textContent ='';
+}
+if(location){
+    locationElem.textContent =location;
+}
+else{
+    locationElem.textContent ='';
+}
+
 locationElem.textContent =location;
 
 }

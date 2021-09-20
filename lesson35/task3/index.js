@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import  { onSearch , fetchRepos }  from './getways.js'
+import  { onSearch  }  from './getways.js'
 import {renderer} from './user.js'
 
 const btn = document.querySelector('.btn');
