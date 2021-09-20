@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import { renderTasks } from './renderer.js';
-import { getItem, setItem } from './storage.js';
+import { setItem } from './storage.js';
 import { createTask, getTasksList } from './taskGateway.js';
 
 const inputElem = document.querySelector('.task-input');
