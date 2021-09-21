@@ -14,7 +14,7 @@ else{
     nameElem.textContent ='';
 }
 if(location){
-    locationElem.textContent =location;
+    locationElem.textContent =`from ${location}`;
 }
 else{
     locationElem.textContent ='';
