@@ -31,5 +31,9 @@ module.exports = {
             new MiniCssExtractPlugin({
                 filename:'[name].css'
             })
-        ]
+        ],
+    devserver:{
+      port:9000,
+      hot:true,
+    }
 }
