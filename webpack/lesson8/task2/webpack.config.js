@@ -30,7 +30,7 @@ module.exports =(env,argv)=> {
             options: { 
               limit: 8192,
               outputPath: 'images',
-            },
+            }, 
           },
         ],
       },]
@@ -44,7 +44,11 @@ module.exports =(env,argv)=> {
             }),
             new CleanWebpackPlugin()
           
-        ]
+        ],
+        devServer: {
+      port: 9000,
+      hot: true,
+    },
       }
       if(isProduction){
         config.plugins.push(
