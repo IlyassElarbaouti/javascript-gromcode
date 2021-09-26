@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // file path: src/index.js
 
 import printProfile from './renderProfile';
